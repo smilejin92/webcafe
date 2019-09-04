@@ -1,0 +1,41 @@
+@charset "utf-8";
+
+body {
+    margin: 0;
+}
+
+/* select class = . */
+.header, .visual, .main-content, .slogan, .footer {
+    margin: 0 auto;
+    width: 940px;
+}
+
+.header {
+    box-sizing: border-box; /* 박스 안에 포함 */
+    background-color: pink;
+    height: 10vh;
+    /*
+    padding: 0 50px; /*위,아래  좌, 우
+    border: 10px solid black;
+    /* what is vh? viewport height
+    */
+}
+.visual {
+    background-color: lime;
+    height: 120px;
+}
+.main-content {
+    min-height: 400px;
+    background-color: skyblue;
+}
+.slogan {
+    background-color: orange;
+    padding: 15px 0;
+}
+.footer-bg {
+    background-color: silver;
+    padding: 15px 0;
+}
+.footer {
+    background-color: yellow;
+}
