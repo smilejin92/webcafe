@@ -15,9 +15,9 @@ body {
     background-color: pink;
     height: 10vh;
     /*
-    padding: 0 50px; /*위,아래  좌, 우
+    padding: 0 50px; (위,아래)  (좌, 우)
     border: 10px solid black;
-    /* what is vh? viewport height
+    what is vh? viewport height
     */
 }
 .visual {
