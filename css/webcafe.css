@@ -175,6 +175,30 @@ body{
   height: 120px;
   position: relative;
 }
+.visual::before, .visual::after {
+    content: "";
+    width: 100%;
+    height: 100%;
+    position: absolute;
+}
+.visual::before {
+    /* background-color: silver;
+    z-index: 10;
+    background-image: url('./images/ani_flower_01.png'), url('./images/ani_flower_02.png');
+    background-repeat: no-repeat;
+    background-position: 0 -10px, 670px, 0; */
+
+    /* shorthand for image, color, repeat, position */
+    background:
+    url('./images/ani_flower_01.png') no-repeat 0 -10px,
+    url('./images/ani_flower_02.png') no-repeat 670px 0;
+}
+.visual::after {
+    /* background-color: aqua; */
+    background:
+    url('./images/ani_flower_03.png') no-repeat 300px 0,
+    url('./images/ani_flower_04.png') no-repeat 800px 15px;
+}
 .visual-text {
     position: absolute;
     background-color: yellow;
@@ -183,6 +207,7 @@ body{
     animation-fill-mode: forwards;
     /* animation-name, animation-duration REQUIRED */
     /* animation-fill-mode decides the behavior at the end of animation */
+    font-family: Georgia, 'Times New Roman', Times, serif;
 }
 .main-content{
   min-height: 400px;
