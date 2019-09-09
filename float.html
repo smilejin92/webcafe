@@ -6,52 +6,29 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>float</title>
     <style>
-        * {
-            margin: 0;
-        }
-        h1 {
-            background-color: yellow;
-        }
-        h2 {
-            background-color: pink;
-        }
-        h3{
-            background-color: lime;
-            clear:both;
-        }
         .box {
-            background-color: skyblue;
-            overflow: hidden;
+            width: 100px;
+            height: 100px;
         }
-        .box [class^="box"] {
-            /* border: 1px solid red; */
-            float: left;
+        .red {
+            background-color: red;
+            display: inline-block;
         }
-        .box2 {
-            position: relative;
-            top: 10px;
-        }
-        /* .box2 {
-            background-color:hsla(30, 80%, 70%, 0.5);
-            float: left;
-            height: 50px;
-        }
-        .box3 {
+        .blue {
             background-color: blue;
-            clear: both; /*강제 마진 추가
-            margin-top: 30px
-        } */
+            display: inline-block;
+            clear: left;
+        }
+        .green {
+            background-color: green;
+            display: inline-block;
+        }
     </style>
 </head>
 <body>
-    <h1>Heading1</h1>
-    <h2>Heading2</h2>
-    <div class="box">
-        <div class="box1">text text text2</div>
-        <div class="box2">float left right clear text text text2</div>
-        <div class="box3">text text text3</div>
-        <div class="box4">text text text4</div>
-    </div>
-    <h3>Heading3</h3>
+    <!-- <div class="red box"></div> -->
+    <span class="red box">RED</span>
+    <span class="blue box">BLUE</span>
+    <span class="green box">GREEN</span>
 </body>
 </html>
