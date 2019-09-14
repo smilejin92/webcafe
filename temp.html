@@ -4,38 +4,30 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>로그인</title>
+    <title>Document</title>
+    <style>
+        .menu {
+            background: skyblue;
+        }
+        .clearfix::after {
+            content: "";
+            clear: both;
+            display: table;
+        }
+        .menu-item {
+            width: 100px;
+            height: 100px;
+            border: 1px solid black;
+            background: orange;
+            float: left;
+        }
+    </style>
 </head>
 <body>
-    <div class="group group1">
-        <div class="group1-login">
-        <h2 class="login-title">로그인</h2>
-            <form class="login-form" action="/action_page.php">
-                <!-- why fieldset? to provide legend -->
-                <fieldset class="input-data">
-                    <legend class="a11y-hidden">로그인 입력 양식</legend>
-                    <!-- 아이디 입력 구간 -->
-                    <div class="user-id">
-                        <label>아이디</label>
-                        <input type="text" class="id" placeholder="이메일 주소">
-                    </div>
-                    <!-- 비밀번호 입력 구간 -->
-                    <div class="user-password">
-                        <label for="password">비밀번호</label>
-                        <input class="password" placeholder="8자리 이상">
-                    </div>
-                
-                    <button type="submit" value="Submit">로그인</button>
-                </fieldset>
-            </form>
-                
-            <ul class="account-info">
-                <!-- ::before로 꺽쇠 이미지 삽입 예정 -->
-                <li><a href="#" role="button">회원가입</a></li>
-                <!-- ::before로 꺽쇠 이미지 삽입 예정 -->
-                <li><a href="#" role="button">아이디/비밀번호 찾기</a></li>
-            </ul>
-        </div>
+    <div class="menu clearfix">
+        <div class="menu-item">HTML</div>
+        <div class="menu-item">CSS</div>
+        <div class="menu-item">웹표준</div>
     </div>
 </body>
 </html>

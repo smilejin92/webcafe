@@ -33,6 +33,9 @@ body{
   font-weight: 400;
   background: gray;
 }
+/* .clearfix {
+  overflow: auto;
+} */
 .header, .visual, .main-content, .slogan, .footer{
   margin: 0 auto;
   width: 940px;
@@ -373,10 +376,25 @@ body{
   margin: 10px 0 0 0;
 }
 
-.term-list::after{
+.odd, .even{
+  margin-top: 15px;
+}
+.odd::after, .even::after{
   content: "";
   clear: both;
   display: block;
+}
+.odd .term-list-subject, .odd .term-list-brief{
+  float: right;
+}
+.odd .term-list-thumbnail{
+  float: left;
+}
+.even .term-list-subject, .even .term-list-brief{
+  float: left;
+}
+.even .term-list-thumbnail{
+  float: right;
 }
 
 /* ------------------------------------------------------- */
@@ -385,7 +403,7 @@ body{
 }
 
 .term-list-subject, .term-list-brief {
-  float: right;
+  /* float: right; */
   width: 145px;
 }
 
@@ -394,10 +412,9 @@ body{
   margin: -2px 0  5px 0;
 }
 
-.term-list-thumbnail {
-  /* background: lime; */
+/* .term-list-thumbnail {
   float: left;
-}
+} */
 
 .term-list-thumbnail img {
   vertical-align: top;
@@ -493,6 +510,208 @@ body{
 .btn-login {
   float: right;
 } */
+
+.search-form {
+  background: linear-gradient(#ccc, #eee);
+  padding: 15px 25px 10px;
+  border: 1px solid #aaa;
+  border-bottom: 0;
+  border-radius: 15px 15px 0 0;
+  /* border-width: 1px 1px 0 1px;
+  border-style: solid solid none solid;
+  border-color: #aaa #aaa transparent #aaa; */
+}
+
+.search-form fieldset{
+  /* display: flex; */
+  /* flex-flow: row wrap; */
+  /* justify-content: center; */
+  border: 0;
+  margin: 0;
+  padding: 0;
+}
+
+label[for="search"], input[type="search"], .btn-search {
+  /* vertical-align inherits its property to its child */
+  vertical-align: middle;
+}
+
+input[type="search"] {
+  height: 24px;
+  border: 1px solid #aaa;
+  padding: 1px 1px 1px 5px;
+  width: 200px;
+  border-radius: 3px;
+  margin: 0 2px;
+}
+
+.btn-search {
+  background: #121212;
+  color: #fff;
+  font: inherit;
+  font-size: 1.3rem;
+  border: 1px solid #aaa;
+  border-radius: 3px;
+  padding: 0 10px;
+  height: 22px;
+}
+
+
+/* 공지사항 
+
+.notice {
+  background: yellow;
+}
+
+.pds {
+  background: silver;
+}
+
+.notice-heading {
+  background: pink
+}
+
+.notice-list li{
+  background: lime;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin : 0;
+}
+
+.notice-list>li>a {
+  width: 280px;
+  background: orange;
+}
+
+time {
+  background: skyblue;
+}
+
+.notice-more {
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+.notice-list {
+  list-style: none;
+  padding-left: 0;
+}
+.pds {
+  position: absolute;
+  top: 0;
+  left: 75px;
+}
+
+.pds-heading {
+  margin: 0;
+}
+*/
+
+/* 공지사항 -revised */
+.board {
+  background: yellow;
+  position: relative;
+}
+.board ul, .board .more {
+  display: none;
+}
+.tab-act ul, .tab-act .more {
+  display: block !important;
+}
+.notice-heading, .pds-heading {  
+  margin: 0;
+  font-weight: 400;
+  font-size: 1em;
+  background: skyblue;
+  position: absolute;
+  top: 0;
+}
+.notice-heading {
+  left: 0;
+}
+.pds-heading {
+  left: 73px;
+}
+.tab {
+  display: block;
+  border: 1px solid #aaa;
+  border-radius: 5px 5px 0 0;
+  background: #ccc linear-gradient(#ccc, #eee);
+  padding: 5px 10px;
+  color: #666;
+}
+.tab-act .tab {
+  color: #ed8625;
+  border-color: #ed8625 #ed8625 #fff #ed8625;
+  background: #fff;
+}
+.board ul {
+  background: pink;
+  margin: 20px 0;
+  padding: 45px 0 0 0;
+  list-style: none;
+}
+.board li {
+  background: lime;
+  margin: 8px 0;
+  display: flex;
+  /* justify-content: space-between; */
+}
+.board li a {
+  background: silver;
+  /* width: 280px; */
+
+  /* pair with margin-left auto below*/
+  /* width: 100%; */
+
+  width: 270px;
+  white-space: nowrap; /* only works with single line */
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.board time {
+  background: orange;
+  /* float: right; */
+
+  /* automatically assign space */
+  margin-left: auto;
+}
+.board .more {
+  background: skyblue;
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+.more::before {
+  color: hsla(110, 70%, 20%, 1);
+}
+
+/* 새소식 */
+
+
+/* 이전 float 요소의 마진이 추가됨 */
+
+/* 검색 양식
+.search-form fieldset{
+  background: linear-gradient(#ccc, #eee);
+  padding: 15px 30px 15px 30px;
+  border-radius: 15px 15px 0 0;
+  border-bottom: none;
+}
+
+.search-form fieldset>input{
+  border-radius: 5px;
+}
+
+.btn-search {
+  color: white;
+  background-color: rgb(27, 27, 27);
+  border-radius: 5px;
+  padding: 3px 5px 3px 5px;
+}
+*/
 
 .slogan{
   background-color: orange;
