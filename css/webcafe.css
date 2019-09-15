@@ -689,7 +689,7 @@ time {
   color: hsla(110, 70%, 20%, 1);
 }
 
-/* 새소식 */
+/* ----------------------------- 새소식 (using float) ----------------------------- */
 .news {
   background: yellow;
   /* 더보기 메뉴를 오른쪽 상단으로 올리기 위해 relative 지정 */
@@ -698,18 +698,7 @@ time {
 .new-post {
   background: cyan;
   color: #ed8625;
-  font-size: 1.3em;
-}
-/* 뉴스 제목, 날짜, 썸네일, 내용 포함 */
-.post-info {
-  background: lime;
-  position: relative;
-}
-/* 뉴스 section의 가상 요소에 clearfix 설정 -> float overflow 방지 */
-.post-info::after {
-  content:"";
-  clear: both;
-  display: table;
+  font-size: 1.2em;
 }
 /* "새소식" 이후 가상 요소를 이용하여 밑 줄 추가 */
 .new-post::after {
@@ -725,33 +714,47 @@ time {
   border-color: linear-gradient(#ccc, #eee);
   */
 }
+/* 뉴스 section의 가상 요소에 clearfix 설정 -> float overflow 방지 */
+.post-info {
+  background: lime;
+}
+.post-info::after {
+  content:"";
+  clear: both;
+  display: table;
+}
 .post-title {
   background: skyblue;
   float: right;
   margin: 0;
+  width: 250px;
 }
 .post-info time {
   background: chocolate;
   float: right;
-  clear: right;
+  /* clear: right; */
+  margin: 0;
+  width: 250px;
 }
 /* 사진, 캡션 포함 */
 .thumbnail-info {
   background: silver;
   text-align: center;
   margin: 0;
-  /* display: inline-block; */
-  /* position: absolute;
-  top: 0;
-  left: 0; */
   float: left;
+}
+.thumbnail-info img {
+  box-shadow: 5px 5px 5px grey;
+}
+.thumbnail-info figcaption {
+  margin: 15px 0 0 0;
 }
 .post-info p {
   background: crimson;
   float: right;
   width: 250px;
-  margin: 0;
-  clear: right;
+  margin: 18px 0 0 0;
+  /* clear: right; */
 }
 .news-more {
   background: pink;
@@ -761,8 +764,6 @@ time {
   right: 0;
 }
 
-
-/* 이전 float 요소의 마진이 추가됨 */
 
 /* 검색 양식
 .search-form fieldset{
