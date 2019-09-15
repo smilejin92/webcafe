@@ -40,6 +40,11 @@ body{
   margin: 0 auto;
   width: 940px;
 }
+
+.group3 {
+  background: skyblue;
+}
+
 .header{
   box-sizing: border-box;
   background-color: pink;
@@ -607,7 +612,7 @@ time {
 
 /* 공지사항 -revised */
 .board {
-  background: yellow;
+  /* background: yellow; */
   position: relative;
 }
 .board ul, .board .more {
@@ -620,7 +625,7 @@ time {
   margin: 0;
   font-weight: 400;
   font-size: 1em;
-  background: skyblue;
+  /* background: skyblue; */
   position: absolute;
   top: 0;
 }
@@ -644,19 +649,19 @@ time {
   background: #fff;
 }
 .board ul {
-  background: pink;
+  /* background: pink; */
   margin: 20px 0;
   padding: 45px 0 0 0;
   list-style: none;
 }
 .board li {
-  background: lime;
+  /* background: lime; */
   margin: 8px 0;
   display: flex;
   /* justify-content: space-between; */
 }
 .board li a {
-  background: silver;
+  /* background: silver; */
   /* width: 280px; */
 
   /* pair with margin-left auto below*/
@@ -668,14 +673,14 @@ time {
   text-overflow: ellipsis;
 }
 .board time {
-  background: orange;
+  /* background: orange; */
   /* float: right; */
 
   /* automatically assign space */
   margin-left: auto;
 }
 .board .more {
-  background: skyblue;
+  /* background: skyblue; */
   position: absolute;
   top: 0;
   right: 0;
@@ -685,6 +690,76 @@ time {
 }
 
 /* 새소식 */
+.news {
+  background: yellow;
+  /* 더보기 메뉴를 오른쪽 상단으로 올리기 위해 relative 지정 */
+  position: relative;
+}
+.new-post {
+  background: cyan;
+  color: #ed8625;
+  font-size: 1.3em;
+}
+/* 뉴스 제목, 날짜, 썸네일, 내용 포함 */
+.post-info {
+  background: lime;
+  position: relative;
+}
+/* 뉴스 section의 가상 요소에 clearfix 설정 -> float overflow 방지 */
+.post-info::after {
+  content:"";
+  clear: both;
+  display: table;
+}
+/* "새소식" 이후 가상 요소를 이용하여 밑 줄 추가 */
+.new-post::after {
+  display: block;
+  margin-top: 20px;
+  content: "";
+  height: 1px;
+  width: 80%;
+  background: linear-gradient(#ccc, #eee);
+  /*
+  border-width: 0 0 1px 0;
+  border-style: solid;
+  border-color: linear-gradient(#ccc, #eee);
+  */
+}
+.post-title {
+  background: skyblue;
+  float: right;
+  margin: 0;
+}
+.post-info time {
+  background: chocolate;
+  float: right;
+  clear: right;
+}
+/* 사진, 캡션 포함 */
+.thumbnail-info {
+  background: silver;
+  text-align: center;
+  margin: 0;
+  /* display: inline-block; */
+  /* position: absolute;
+  top: 0;
+  left: 0; */
+  float: left;
+}
+.post-info p {
+  background: crimson;
+  float: right;
+  width: 250px;
+  margin: 0;
+  clear: right;
+}
+.news-more {
+  background: pink;
+  /* 부모 클래스인 .news의 위치에 대하여 우측 상단에 배치 */
+  position: absolute;
+  top: 0;
+  right: 0;
+}
 
 
 /* 이전 float 요소의 마진이 추가됨 */
