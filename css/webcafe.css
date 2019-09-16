@@ -751,7 +751,7 @@ time {
 
 /* 신규 이벤트 및 관련 사이트 */
 .gradient-box {
-  background: linear-gradient(to bottom, #bbb, #fff);
+  background: linear-gradient(to bottom, #ccc, #eee);
   border-radius: 10px;
 }
 .event {
