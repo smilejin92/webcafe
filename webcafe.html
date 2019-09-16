@@ -2,7 +2,6 @@
 <html lang="ko-KR">
 <head>
   <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>웹카페-HTML5,CSS3,웹표준,웹접근성</title>
   <!-- <link rel="stylesheet" href="https://necolas.github.io/normalize.css/latest/normalize.css"> -->
   <link rel="stylesheet" href="./css/webcafe.css">
@@ -341,9 +340,11 @@
               선착순 500명 한정으로 증정.
             </p>
           </div>
-          <div class="btn-even">
-            <button type="button" class="btn-event">이전 이벤트 보기</button>
-            <button type="button" class="btn-event">다음 이벤트 보기</button>
+          <div class="btn-event">
+            <!-- <button type="button" class="btn-event-prev">이전 이벤트 보기</button>
+            <button type="button" class="btn-event-next">다음 이벤트 보기</button> -->
+            <button type="button" class="btn-event-prev" aria-label="이전 이벤트 보기"></button>
+            <button type="button" class="btn-event-next" aria-label="다음 이벤트 보기"></button>
           </div>
         </section>
         <section class="related">

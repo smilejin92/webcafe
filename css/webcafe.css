@@ -751,7 +751,60 @@ time {
 
 /* 신규 이벤트 및 관련 사이트 */
 .gradient-box {
-  background: yellow;
+  background: linear-gradient(to bottom, #bbb, #fff);
+  border-radius: 10px;
+}
+.event {
+  /* background: yellow; */
+  position: relative;
+}
+.event-heading {
+  margin: 0;
+  padding: 15px 0 0 10px;
+  font-size: 1.5rem;
+}
+.event-heading>.orange {
+  padding-left: 5px;
+  /* background: skyblue; */
+  color: #ed8625;
+}
+#event-detail {
+  margin-left: 10px;
+}
+#event-detail img {
+  box-shadow: 7px 7px #aaa;
+}
+#event-detail:nth-child(2) {
+  width: 170px;
+  margin-bottom: 10px;
+  border-bottom: 1px solid #aaa;
+}
+#event-detail em {
+  display: block;
+}
+.btn-event {
+  position: absolute;
+  top: 10px;
+  right: 12px;
+  overflow: hidden;
+  width: 43px;
+  height: 21px;
+}
+.btn-event-prev, .btn-event-next {
+  display: inline-block;
+  border-style: none;
+  padding: 0;
+  width: 19px;
+  height: 18px;
+  font-size: 0.4rem;
+  overflow: hidden;
+}
+.btn-event-prev {
+  background: url(images/back_forward.png) 0 0;
+}
+.btn-event-next {
+  left: 22px;
+  background: url(images/back_forward.png) 19px 0;
 }
 
 /* 검색 양식
