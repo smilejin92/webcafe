@@ -1,0 +1,145 @@
+@charset "utf-8";
+@import url('https://necolas.github.io/normalize.css/latest/normalize.css');
+@import url('https://spoqa.github.io/spoqa-han-sans/css/SpoqaHanSans-kr.css');
+@import url('./fontello.css');
+
+
+/* 초기화 */
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+a{
+  text-decoration: none;
+  color: inherit;
+}
+/* 숨김 콘텐츠 */
+.a11y-hidden, legend{
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0,0,0,0);
+  white-space: nowrap;
+}
+html{
+  font-size: 10px;
+}
+body{
+  font-size: 1.4rem;
+  margin: 50px;
+  color: #181818;
+  font-family: 'Spoqa Han Sans', 'Sans-serif';
+  font-weight: 400;
+  background: #fff;
+}
+
+/* 탭 UI */
+.board {
+    position: relative;
+    width: 380px;
+}
+.tab-list, .board-list {
+    list-style: none;
+    padding-left: 0;
+    margin: 0;
+}
+.tab-list {
+    /* display: flex; */
+    /* background: pink; */
+    list-style: none;
+    padding-left: 0;
+    margin: 0;
+}
+/* used for float */
+.tab-list::after {
+    content: "";
+    display: table; /* or block */
+    clear: both;
+}
+.tab-list li {
+    /* display: inline-block; */
+    float: left;
+}
+[role="tab"] {
+    background: #ccc linear-gradient(#ccc, #eee);
+    display: block; /* block이 되더라도 부모 클래스의 width만큼만 늘어남 */
+    padding: 5px 10px;
+    border: 1px solid #aaa;
+    color: #aaa;
+    border-radius: 5px 5px 0 0;
+}
+/* no space between each property */
+[role="tab"][aria-selected="true"] {
+    color: #ed8625;
+    background: #fff;
+    border-color: hsla(25, 70%, 60%, 1) hsla(25, 70%, 60%, 1) #fff  hsla(25, 70%, 60%, 1)
+}
+.notice, .pds {
+    display: none;
+}
+.tab-content-act {
+    display: block !important;
+}
+.board-list {
+    margin-top: 20px;
+}
+.board-list li {
+    display: flex;
+    margin: 5px;
+}
+.board-list time {
+    margin-left: auto;
+}
+.board-list a {
+    width: 285px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.more {
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 5px; /* more clickable area */
+}
+.more::before {
+    color: rgb(38, 85, 28);
+}
+/*
+.tab-list {
+    background: orange;
+    padding: 0;
+    margin: 0;
+    position: relative;
+}
+.tab-list::after {
+    content:"";
+    clear: both;
+    display: table;
+}
+.tab-list li {
+    background: linear-gradient(#ccc, #eee);
+    list-style: none;
+    border-radius: 10px 10px 0 0;
+    float: left;
+    width: 75px;
+    color: #ed8625;
+    font-size: 1.2em;
+    text-align: center;
+    padding: 5px;
+}
+.board-list {
+    list-style: none;
+    background: yellow;
+    padding: 0;
+    margin: 0;
+}
+.tab-list a {
+    background: chocolate;
+    width: 65px;
+}
+.tab-content {
+    background: lime;
+}
+*/

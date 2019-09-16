@@ -1,0 +1,40 @@
+@charset "utf-8";
+/* padding을 활용한 IR */
+.brand1 {
+    background: yellow url(./images/title.png) no-repeat;
+    height: 0px;
+    width: 290px;
+    padding-top: 195px;
+    overflow: hidden;
+}
+/* text-indent를 활용한 IR */
+.brand2 {
+    background: pink url(./images/title.png) no-repeat;
+    height: 195px;
+    width: 290px;
+    text-indent: 290px;
+    white-space: nowrap;
+    overflow: hidden;
+}
+/* 위 두 방법의 단점: 서버 연결이 불안정하면 heading text가 사라짐 */
+/* 이미지로 덮어버리기, 이미지가 로드 안돼도 뒤의 텍스트가 보임 */
+/* example -> sprite image? */
+.brand3 {
+    background: lime;
+    height: 195px;
+    line-height: 195px;
+    width: 290px;
+    text-align: center;
+    font-size: 16px;
+    font-weight: 400;
+    position: relative;
+}
+.brand3::after {
+    content:"";
+    position: absolute; /* make element block */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url(./images/title.png) no-repeat;
+}

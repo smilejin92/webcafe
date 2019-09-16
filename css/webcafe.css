@@ -689,81 +689,70 @@ time {
   color: hsla(110, 70%, 20%, 1);
 }
 
-/* ----------------------------- 새소식 (using float) ----------------------------- */
+/* 새소식 */
 .news {
-  background: yellow;
-  /* 더보기 메뉴를 오른쪽 상단으로 올리기 위해 relative 지정 */
+  margin-top: 20px;
   position: relative;
 }
-.new-post {
-  background: cyan;
-  color: #ed8625;
-  font-size: 1.2em;
-}
-/* "새소식" 이후 가상 요소를 이용하여 밑 줄 추가 */
-.new-post::after {
-  display: block;
-  margin-top: 20px;
-  content: "";
-  height: 1px;
-  width: 80%;
-  background: linear-gradient(#ccc, #eee);
-  /*
-  border-width: 0 0 1px 0;
-  border-style: solid;
-  border-color: linear-gradient(#ccc, #eee);
-  */
-}
-/* 뉴스 section의 가상 요소에 clearfix 설정 -> float overflow 방지 */
-.post-info {
-  background: lime;
-}
-.post-info::after {
+.news::before {
   content:"";
-  clear: both;
-  display: table;
+  background: linear-gradient(to right, #aaa, #fff);
+  position: absolute;
+  top: 30px;
+  left: 0;
+  width: 80%;
+  height: 1px;
 }
-.post-title {
-  background: skyblue;
-  float: right;
+.news-heading {
   margin: 0;
-  width: 250px;
+  font-size: 1.5rem;
+  color: #ed8625;
 }
-.post-info time {
-  background: chocolate;
-  float: right;
-  /* clear: right; */
+.news-link {
+  display: block;
+}
+.news-article {
+  padding-left: 130px; /* brilliant */
+  position: relative;
+  min-height: 105px; /* awesome */
+}
+.news-article-subject {
+  margin: 30px 0 0 0;
+  font-size: 1.4rem;
+  font-weight: 450; /* 웹폰트 파헤치기 slide */
+}
+.news-article-date {
+  display: block;
+  margin: 5px 0 10px; /* block element */
+}
+.news-article-brief {
   margin: 0;
-  width: 250px;
+  line-height: 1.5;
 }
-/* 사진, 캡션 포함 */
-.thumbnail-info {
-  background: silver;
+.news-article-thumbnail {
+  margin: 0;
+  /* text-align: center; move down to figcaption */
+  position: absolute;
+  top: 3px;
+  left: 0;
+}
+.news-article-thumbnail img {
+  box-shadow: 0 15px 15px 0 #aaa;
+}
+.news-article-thumbnail figcaption {
   text-align: center;
-  margin: 0;
-  float: left;
-}
-.thumbnail-info img {
-  box-shadow: 5px 5px 5px grey;
-}
-.thumbnail-info figcaption {
-  margin: 15px 0 0 0;
-}
-.post-info p {
-  background: crimson;
-  float: right;
-  width: 250px;
-  margin: 18px 0 0 0;
-  /* clear: right; */
+  margin-top: 15px;
 }
 .news-more {
-  background: pink;
-  /* 부모 클래스인 .news의 위치에 대하여 우측 상단에 배치 */
   position: absolute;
   top: 0;
   right: 0;
 }
 
+/* 신규 이벤트 및 관련 사이트 */
+.gradient-box {
+  background: yellow;
+}
 
 /* 검색 양식
 .search-form fieldset{
