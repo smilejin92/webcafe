@@ -306,7 +306,7 @@
         <a href="#" class="icon-plus news-more more" title="새소식">더보기</a>
       </section>
       
-      <!-- 새소식
+      <!-- 새소식 old
       <div class="news">
         <h2 class="new-post">새소식</h2>
         <a href="#" class="post-wrap">
@@ -326,9 +326,11 @@
     </div>
     <!-- group 3 -->
     <div class="group group3">
+      <!-- 신규 이벤트 & 관련 사이트-->
       <div class="gradient-box">
+        <!-- 신규 이벤트 -->
         <section class="event">
-          <h2 class="event-heading">신규<span class="orange">이벤트</span></h2>
+          <h2 class="event-heading">신규<span class="point-color">이벤트</span></h2>
           <div id="event-detail">
             <p>
               <!-- 본문의 의미를 가지는 이미지 -->
@@ -341,15 +343,15 @@
             </p>
           </div>
           <div class="btn-event">
-            <!-- <button type="button" class="btn-event-prev">이전 이벤트 보기</button>
-            <button type="button" class="btn-event-next">다음 이벤트 보기</button> -->
-            <button type="button" class="btn-event-prev" aria-label="이전 이벤트 보기"></button>
-            <button type="button" class="btn-event-next" aria-label="다음 이벤트 보기"></button>
+            <button type="button" class="btn-event-prev">이전 이벤트 보기</button>
+            <button type="button" class="btn-event-next">다음 이벤트 보기</button>
+            <!-- <button type="button" class="btn-event-prev" aria-label="이전 이벤트 보기"></button>
+            <button type="button" class="btn-event-next" aria-label="다음 이벤트 보기"></button> -->
           </div>
         </section>
         <section class="related">
-          <h2 class="related-heading">관련<span class="orange"></span>사이트</h2>
-          <ul class="related-list">
+          <h2 class="related-heading">관련<span class="point-color">사이트</span></h2>
+          <ul class="related-list" tabindex="0">
             <li><a href="#">패스트 캠퍼스</a></li>
             <li><a href="#">W3C</a></li>
             <li><a href="#">웹접근성 연구소</a></li>
@@ -358,13 +360,70 @@
           </ul>
         </section>
       </div>
+      <!-- 인기사이트 -->
+      <section class="favorite gradient-box">
+        <h2 class="favorite-heading">인기 <span class="point-color">사이트</span></h2>
+        <ol class="favorite-list">
+          <li class="no1">
+            <a href="#">W3C</a>
+            <em class="up">상승</em>
+          </li>
+          <li class="no2">
+            <a href="#">CSS Zen Garden</a>
+            <em class="down">하락</em>
+          </li>
+          <li class="no3">
+            <a href="#">MDN</a>
+            <em class="stop">멈춤</em>
+          </li>
+          <li class="no4">
+            <a href="#">Web Standards</a>
+            <em class="up">상승</em>
+          </li>
+        </ol>
+        <a href="#" class="icon-plus favorite-more" title="인기 사이트">더보기</a>
+      </section>
     </div>
   </main>
   <!-- 슬로건 -->
-  <article class="slogan">슬로건</article>
+  <article class="slogan clearfix">
+    <h2 class="slogan-heading" titile="웹 카페에서 웹 표준을">
+      슬로건
+    </h2>
+    <p class="slogan-content">
+      <q cite="https://w3.org/WAI">The power of the Web is in its universality, Access by everyone regardless of disability is an essential aspect.</q>
+      <span>Tim Berners - Lee , W3C Director and inventor of the World Wide Web</span>
+    </p>
+    <footer class="a11y-hidden">
+      출저 : W3C(https://w3.org/WAI)
+    </footer>
+  </article>
   <!-- Footer -->
   <div class="footer-bg">
-    <footer class="footer">푸터</footer>
+    <footer class="footer">
+      <a href="#" class="footer-logo">
+        <img src="./images/footer_logo.png" alt="web cafe">
+      </a>
+      <ul class="guide-list clearfix">
+        <li><a href="#">회사소개</a></li>
+        <li><a href="#">개인정보 보호정책</a></li>
+        <li><a href="#">이메일주소 무단수집 거부</a></li>
+        <li><a href="#">contact us</a></li>
+        <li><a href="#">site map</a></li>
+      </ul>
+      <address class="address">
+        <span>서울시 강남구 역삼동 718-5</span>
+        <span>전화 : 02-3429-5114</span>
+        <span>email : seulbinim@gmail.com</span>
+      </address>
+      <small class="copyright">
+        Copyright since &copy; 2010 by Web Cafe CORPORATION ALL RIGHTS RESERVED.
+      </small>
+      <div class="badge">
+        <img src="./images/html5_logo.png" alt="최신 표준 기술인 HTML5를 적용하였습니다.">
+        <img src="./images/css3_logo.png" alt="최신 표준 기술인 CSS3를 적용하였습니다">
+      </div>
+    </footer>
   </div>
 </body>
 </html>
