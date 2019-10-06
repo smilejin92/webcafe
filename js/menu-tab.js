@@ -9,9 +9,9 @@ item.on('mouseover focusin', function(){
   $(this).addClass('menu-act');
 });
 // 탭 요소에 키보드 포커그를 받을 수 있도록 tabindex 속성 추가하기
-tab.attr('tabindex', '0');
+// tab.attr('tabindex', '0');
 // 탭 목록에 아이콘을 일괄 추가하기
-list.find('a').attr('class', 'icon-dot-circled');
+// list.find('a').attr('class', 'icon-dot-circled');
 
 // 탭 클릭 시 tab-act 클래스를 부모 요소에 추가하기
 tab.on('click keyup', function(e){
